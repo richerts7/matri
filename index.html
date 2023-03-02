@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Saadi-rachao.com</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Marriage Nav -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/gath.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Gathbandhan.com
+                </a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+                </div>
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                </div>
+                <span style="font-size:larger">Menu <button class="navbar-toggler" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button></span>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h3 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="./img/gath.jpeg" alt="">
+                        </h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+        </nav>
+
+        <!-- Login  -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="exampleModalLabel">Login to Gathbandhan Web</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- signup -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="signupModalLabel">Get an Gadhbandhan Account</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="text" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="text" aria-describedby="text">
+                            </div>
+                            <div class="mb-3">
+                                <label for="text" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="text" aria-describedby="text">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mexampleInputContact" class="form-label">Contact Number</label>
+                                <input type="contact" class="form-control" id="mexampleInputContact"
+                                    aria-describedby="contactHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="cexampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marriage Carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://source.unsplash.com/1400x300/?Matrimony" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Welcome to Marriage Ceremony</h2>
+                        <p>Your search for the perfect match ends here!</p>
+                        <button class="btn btn-danger">Saadi</button>
+                        <button class="btn btn-primary">Matching</button>
+                        <button class="btn btn-success">Engagement</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://source.unsplash.com/1400x300/?Engagement" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>The Best Bandhan</h2>
+                        <p>“If I get married, I want to be very married.” — Audrey Hepburn</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://source.unsplash.com/1400x300/?marriage" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Ring Ceremony</h2>
+                        <p>“A successful marriage requires falling in love many times, always with the same person.” —
+                            Mignon McLaughlin</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Events</strong>
+                        <h3 class="mb-0">Ceremony Events</h3>
+                        <div class="mb-1 text-muted">March 2023</div>
+                        <p class="card-text mb-auto">“Real love amounts to withholding the truth, even when you’re
+                            offered the perfect opportunity to hurt someone’s feelings.”
+                        </p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="200" height="250"
+                            src="https://source.unsplash.com/500x700/?marriage" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Marriage Hall</strong>
+                        <h3 class="mb-0">Facilities In our Lawn</h3>
+                        <div class="mb-1 text-muted">March 2023</div>
+                        <p class="mb-auto">“Marriages, like a garden, take time to grow. But the harvest is rich unto
+                            those who patiently and tenderly care for the ground.”</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="200" height="250"
+                            src="https://source.unsplash.com/500x700/?lawn" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Engagement's</strong>
+                        <h3 class="mb-0">The time when you are engaged</h3>
+                        <div class="mb-1 text-muted">March 2023</div>
+                        <p class="card-text mb-auto">“Chains do not hold marriage together. It is threads, hundreds of
+                            tiny threads which sew people together through the years.”</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="200" height="250"
+                            src="https://source.unsplash.com/500x700/?engagement" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Marriage</strong>
+                        <h3 class="mb-0">Gathbandhan Speciality</h3>
+                        <div class="mb-1 text-muted">March 2023</div>
+                        <p class="card-text mb-auto">“The greatest marriages are built on teamwork. A mutual respect, a
+                            healthy dose of admiration, and a never-ending portion of love and grace.” </p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="200" height="250"
+                            src="https://source.unsplash.com/500x700/?wedding" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="container py-3">
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <img src="./img/gath.jpeg" alt="">
+                    <span class="fs-4">Booking Management</span>
+                </a>
+
+                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Features</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Enterprise</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
+                    <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
+                </nav>
+            </div>
+
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal">Pricing</h1>
+                <p class="fs-5 text-muted">Arrange best wedding plan and meet us today for best wedding in your areas
+                    now. Make Plan and decide places you are searching for a wedding today, Here are various booking
+                    services available. So book today, take advantage and enjoy destination wedding everywhere in
+                    India.”</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Normal Wedding Booking</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">Rupees<small class="text-muted fw-light"></small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>xyz</li>
+                                <li>xyz</li>
+                                <li>xyz</li>
+
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for
+                                Booking</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Advance Booking</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">Rupees<small class="text-muted fw-light"></small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>XYZ</li>
+                                <li>XYZ</li>
+                                <li>XYZ</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Wedding Planer Agent</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">Rupees<small class="text-muted fw-light"></small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>ABCD</li>
+                                <li>ABCD</li>
+                                <li>ABCD</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+            <div class="table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th style="width: 34%;"></th>
+                            <th style="width: 22%;">Free</th>
+                            <th style="width: 22%;">Pro</th>
+                            <th style="width: 22%;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Public</th>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Private</th>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Permissions</th>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Sharing</th>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Unlimited members</th>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Extra security</th>
+                            <td></td>
+                            <td></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check"></use>
+                                </svg></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2" src="./img/gath.jpeg" alt="" width="24" height="19">
+                    <small class="d-block mb-3 text-muted">© 2023-24</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for
+                                developers</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- About us -->
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2023-24 Gathbandhan.com <br> All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- Front page -->
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</html>
